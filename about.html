@@ -1,0 +1,1351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About | Maruleng Football Club</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           ABOUT PAGE
+        ========================= */
+
+        .about-page {
+            background: #ffffff;
+            color: #123d28;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .about-hero {
+            background: #023b1b;
+            color: #ffffff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .about-hero .label {
+            display: block;
+            color: #8ee0ad;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(40px, 6vw, 64px);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .about-hero p {
+            max-width: 720px;
+            margin: auto;
+            color: rgba(255,255,255,0.86);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           INTRODUCTION
+        ========================= */
+
+        .about-intro {
+            padding: 85px 20px;
+        }
+
+        .about-intro-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+
+            gap: 65px;
+
+            align-items: center;
+        }
+
+        .about-intro-content .label {
+            display: block;
+
+            color: #087a3b;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .about-intro-content h2 {
+            color: #023b1b;
+
+            font-size: clamp(32px, 4vw, 44px);
+
+            line-height: 1.15;
+
+            margin-bottom: 20px;
+        }
+
+        .about-intro-content p {
+            color: #66756c;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           CLUB EMBLEM
+        ========================= */
+
+        .about-emblem {
+            background: #f6faf7;
+
+            border: 1px solid #dce9df;
+
+            border-radius: 18px;
+
+            min-height: 390px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 45px;
+        }
+
+        .about-emblem img {
+            width: 240px;
+
+            height: 240px;
+
+            object-fit: contain;
+        }
+
+
+        /* =========================
+           CLUB FACTS
+        ========================= */
+
+        .facts-section {
+            background: #f6faf7;
+
+            padding: 85px 20px;
+        }
+
+        .section-heading-about {
+            max-width: 750px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+        }
+
+        .section-heading-about .label {
+            display: block;
+
+            color: #087a3b;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .section-heading-about h2 {
+            color: #023b1b;
+
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+        .section-heading-about p {
+            color: #66756c;
+
+            line-height: 1.7;
+        }
+
+        .facts-grid {
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        .fact-card {
+            background: #ffffff;
+
+            border: 1px solid #dce9df;
+
+            border-radius: 12px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+        }
+
+        .fact-card .fact-number {
+            color: #087a3b;
+
+            font-size: 30px;
+
+            font-weight: 900;
+
+            margin-bottom: 5px;
+        }
+
+        .fact-card h3 {
+            color: #023b1b;
+
+            font-size: 15px;
+
+            margin-bottom: 6px;
+        }
+
+        .fact-card p {
+            color: #66756c;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           HISTORY
+        ========================= */
+
+        .history-section {
+            padding: 90px 20px;
+        }
+
+        .history-content {
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .history-content .label {
+            display: block;
+
+            color: #087a3b;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .history-content h2 {
+            color: #023b1b;
+
+            font-size: 38px;
+
+            margin-bottom: 20px;
+        }
+
+        .history-content p {
+            color: #66756c;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin-bottom: 15px;
+        }
+
+        .history-year {
+            margin: 35px auto 0;
+
+            width: 115px;
+
+            height: 115px;
+
+            border-radius: 50%;
+
+            background: #087a3b;
+
+            color: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-direction: column;
+        }
+
+        .history-year strong {
+            font-size: 28px;
+
+            line-height: 1;
+        }
+
+        .history-year span {
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           IDENTITY
+        ========================= */
+
+        .identity-section {
+            background: #023b1b;
+
+            color: #ffffff;
+
+            padding: 90px 20px;
+        }
+
+        .identity-heading {
+            max-width: 750px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+        }
+
+        .identity-heading .label {
+            display: block;
+
+            color: #8ee0ad;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .identity-heading h2 {
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+        .identity-heading p {
+            color: rgba(255,255,255,0.78);
+
+            line-height: 1.7;
+        }
+
+        .identity-grid {
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .identity-card {
+            border: 1px solid rgba(255,255,255,0.15);
+
+            background: rgba(255,255,255,0.05);
+
+            border-radius: 12px;
+
+            padding: 32px 25px;
+        }
+
+        .identity-card h3 {
+            color: #ffffff;
+
+            font-size: 19px;
+
+            margin-bottom: 10px;
+        }
+
+        .identity-card p {
+            color: rgba(255,255,255,0.72);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           SLOGAN
+        ========================= */
+
+        .slogan-section {
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .slogan-box {
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 55px 30px;
+
+            border: 1px solid #dce9df;
+
+            border-radius: 18px;
+
+            background: #f6faf7;
+        }
+
+        .slogan-box .label {
+            display: block;
+
+            color: #087a3b;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+        .slogan-box h2 {
+            color: #023b1b;
+
+            font-size: clamp(27px, 4vw, 42px);
+
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+        }
+
+        .slogan-box p {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #66756c;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           MANAGEMENT
+        ========================= */
+
+        .management-section {
+            background: #f6faf7;
+
+            padding: 85px 20px;
+        }
+
+        .management-card {
+            max-width: 850px;
+
+            margin: auto;
+
+            background: #ffffff;
+
+            border: 1px solid #dce9df;
+
+            border-radius: 16px;
+
+            padding: 40px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+
+            box-shadow:
+                0 12px 35px rgba(0,50,20,0.06);
+        }
+
+        .management-info .label {
+            display: block;
+
+            color: #087a3b;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+        .management-info h3 {
+            color: #023b1b;
+
+            font-size: 25px;
+
+            margin-bottom: 5px;
+        }
+
+        .management-info p {
+            color: #66756c;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        .management-contact {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        .management-contact a {
+            display: block;
+
+            background: #eaf8ef;
+
+            color: #045526;
+
+            padding: 12px 16px;
+
+            border-radius: 6px;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .site-footer {
+            background: #021f10;
+
+            color: #ffffff;
+
+            padding: 45px 20px 25px;
+        }
+
+        .footer-wrapper {
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .footer-main {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+            padding-bottom: 35px;
+        }
+
+        .footer-brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .footer-brand img {
+            width: 65px;
+
+            height: 65px;
+
+            object-fit: contain;
+        }
+
+        .footer-brand h3 {
+            margin-bottom: 3px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+
+            font-size: 13px;
+        }
+
+        .footer-contact h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-contact p {
+            color: rgba(255,255,255,0.7);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        .footer-bottom {
+            border-top:
+                1px solid rgba(255,255,255,0.12);
+
+            padding-top: 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.65);
+
+            font-size: 12px;
+        }
+
+        .footer-credit a {
+            color: #8ee0ad;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .about-intro-grid {
+                grid-template-columns: 1fr;
+
+            }
+
+            .about-emblem {
+                min-height: 300px;
+            }
+
+            .facts-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .identity-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .about-hero {
+                padding: 75px 20px;
+            }
+
+            .about-intro {
+                padding: 65px 20px;
+            }
+
+            .about-intro-content h2,
+            .section-heading-about h2,
+            .history-content h2,
+            .identity-heading h2 {
+                font-size: 30px;
+            }
+
+            .about-emblem {
+                min-height: 260px;
+
+                padding: 30px;
+            }
+
+            .about-emblem img {
+                width: 190px;
+                height: 190px;
+            }
+
+            .facts-grid,
+            .identity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .management-card {
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 30px 20px;
+            }
+
+            .management-contact {
+                width: 100%;
+            }
+
+            .management-contact a {
+                white-space: normal;
+            }
+
+            .footer-main {
+                flex-direction: column;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="about-page">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <div class="container navbar">
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="logo.png"
+                alt="Maruleng Football Club Logo"
+            >
+
+            <div class="brand-text">
+
+                <div class="brand-name">
+                    MARULENG FC
+                </div>
+
+                <div class="brand-est">
+                    EST. 2012
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <button class="menu-toggle">
+            MENU
+        </button>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html" class="active">
+                About
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
+            <a href="fixtures.html">
+                Fixtures
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="partnership.html">
+                Partnership
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <span class="label">
+            About The Club
+        </span>
+
+        <h1>
+            Maruleng Football Club
+        </h1>
+
+        <p>
+            A football club rooted in its community, built on
+            discipline, unity and a commitment to football
+            development.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="about-intro">
+
+    <div class="about-intro-grid">
+
+
+        <div class="about-intro-content">
+
+            <span class="label">
+                Who We Are
+            </span>
+
+            <h2>
+                Football Rooted in Maruleng
+            </h2>
+
+            <p>
+                Maruleng Football Club is a football club based in
+                Ga-Sekororo, Mabins Cross, Limpopo.
+            </p>
+
+            <p>
+                Established in 2012, the club represents its local
+                community through football and continues to build
+                its identity around teamwork, discipline and
+                commitment.
+            </p>
+
+            <p>
+                Maruleng FC provides a platform for players to
+                compete, develop their football abilities and
+                represent their community with pride.
+            </p>
+
+        </div>
+
+
+        <div class="about-emblem">
+
+            <img
+                src="logo.png"
+                alt="Maruleng Football Club Emblem"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLUB FACTS
+========================= -->
+
+<section class="facts-section">
+
+    <div class="container">
+
+        <div class="section-heading-about">
+
+            <span class="label">
+                Club Profile
+            </span>
+
+            <h2>
+                Maruleng FC at a Glance
+            </h2>
+
+            <p>
+                Key information about the football club.
+            </p>
+
+        </div>
+
+
+        <div class="facts-grid">
+
+
+            <div class="fact-card">
+
+                <div class="fact-number">
+                    2012
+                </div>
+
+                <h3>
+                    Established
+                </h3>
+
+                <p>
+                    The year Maruleng Football Club was established.
+                </p>
+
+            </div>
+
+
+            <div class="fact-card">
+
+                <div class="fact-number">
+                    FC
+                </div>
+
+                <h3>
+                    Football Club
+                </h3>
+
+                <p>
+                    A football club representing the Maruleng community.
+                </p>
+
+            </div>
+
+
+            <div class="fact-card">
+
+                <div class="fact-number">
+                    22
+                </div>
+
+                <h3>
+                    Player Spaces
+                </h3>
+
+                <p>
+                    The club's website provides space for 22 team players.
+                </p>
+
+            </div>
+
+
+            <div class="fact-card">
+
+                <div class="fact-number">
+                    TOP 8
+                </div>
+
+                <h3>
+                    Current Progress
+                </h3>
+
+                <p>
+                    Maruleng FC has qualified for the Top 8 of the
+                    Top 16 Ground Tournament.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HISTORY
+========================= -->
+
+<section class="history-section">
+
+    <div class="container">
+
+        <div class="history-content">
+
+            <span class="label">
+                Our History
+            </span>
+
+            <h2>
+                Established in 2012
+            </h2>
+
+            <p>
+                Since its establishment in 2012, Maruleng Football
+                Club has been part of the football community in
+                Ga-Sekororo and the surrounding area.
+            </p>
+
+            <p>
+                The club continues to build its football journey
+                through competition, teamwork and community
+                participation.
+            </p>
+
+
+            <div class="history-year">
+
+                <strong>
+                    2012
+                </strong>
+
+                <span>
+                    ESTABLISHED
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLUB IDENTITY
+========================= -->
+
+<section class="identity-section">
+
+    <div class="container">
+
+        <div class="identity-heading">
+
+            <span class="label">
+                Our Identity
+            </span>
+
+            <h2>
+                What Maruleng FC Represents
+            </h2>
+
+            <p>
+                The club's identity is built around the values
+                that guide its players, management and supporters.
+            </p>
+
+        </div>
+
+
+        <div class="identity-grid">
+
+
+            <div class="identity-card">
+
+                <h3>
+                    Unity
+                </h3>
+
+                <p>
+                    Bringing players, supporters and the community
+                    together through football.
+                </p>
+
+            </div>
+
+
+            <div class="identity-card">
+
+                <h3>
+                    Discipline
+                </h3>
+
+                <p>
+                    Encouraging commitment, responsibility and
+                    respect both on and off the pitch.
+                </p>
+
+            </div>
+
+
+            <div class="identity-card">
+
+                <h3>
+                    Development
+                </h3>
+
+                <p>
+                    Creating opportunities for players to develop
+                    their football abilities through competition
+                    and experience.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SLOGAN
+========================= -->
+
+<section class="slogan-section">
+
+    <div class="container">
+
+        <div class="slogan-box">
+
+            <span class="label">
+                Club Slogan
+            </span>
+
+            <h2>
+                United by Our Roots,
+                Driven by Our Goals
+            </h2>
+
+            <p>
+                Our slogan reflects the connection between
+                Maruleng Football Club, its community and its
+                ambitions for the future.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MANAGEMENT
+========================= -->
+
+<section class="management-section">
+
+    <div class="container">
+
+        <div class="section-heading-about">
+
+            <span class="label">
+                Club Management
+            </span>
+
+            <h2>
+                Meet The Manager
+            </h2>
+
+            <p>
+                Official management contact for Maruleng Football Club.
+            </p>
+
+        </div>
+
+
+        <div class="management-card">
+
+
+            <div class="management-info">
+
+                <span class="label">
+                    Club Manager
+                </span>
+
+                <h3>
+                    Mr Masete
+                </h3>
+
+                <p>
+                    Official manager of Maruleng Football Club.
+                </p>
+
+            </div>
+
+
+            <div class="management-contact">
+
+                <a href="tel:0772514495">
+                    077 251 4495
+                </a>
+
+                <a href="tel:0795575716">
+                    079 557 5716
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-wrapper">
+
+
+        <div class="footer-main">
+
+
+            <div class="footer-brand">
+
+                <img
+                    src="logo.png"
+                    alt="Maruleng Football Club Logo"
+                >
+
+                <div>
+
+                    <h3>
+                        MARULENG FC
+                    </h3>
+
+                    <p>
+                        United by Our Roots, Driven by Our Goals
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    Ga-Sekororo, Mabins Cross
+                </p>
+
+                <p>
+                    WhatsApp: 064 986 9333
+                </p>
+
+                <p>
+                    Manager: Mr Masete
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Maruleng Football Club. All Rights Reserved.
+            </p>
+
+            <p class="footer-credit">
+
+                Website developed in partnership with
+
+                <a
+                    href="https://mphowebsolutions.co.za"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Mpho Web Solutions
+                </a>
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+

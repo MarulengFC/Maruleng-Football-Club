@@ -1,0 +1,1516 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>News | Maruleng Football Club</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           NEWS PAGE
+        ========================= */
+
+        .news-page {
+            background: #ffffff;
+            color: #123d28;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .news-hero {
+            background: #023b1b;
+            color: #ffffff;
+            padding: 95px 20px;
+            text-align: center;
+        }
+
+        .news-hero .label {
+            display: block;
+            color: #8ee0ad;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .news-hero h1 {
+            font-size: clamp(40px, 6vw, 62px);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .news-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: rgba(255,255,255,0.86);
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .news-intro {
+            padding: 75px 20px 45px;
+            text-align: center;
+        }
+
+        .news-intro .label {
+            display: block;
+            color: #087a3b;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .news-intro h2 {
+            color: #023b1b;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .news-intro p {
+            max-width: 720px;
+            margin: auto;
+            color: #66756c;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FEATURED NEWS
+        ========================= */
+
+        .featured-news-section {
+            padding: 25px 20px 80px;
+        }
+
+        .featured-news {
+            max-width: 1050px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+
+            background: #ffffff;
+
+            border: 1px solid #dce9df;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 40px rgba(0, 50, 20, 0.08);
+        }
+
+        .featured-visual {
+            min-height: 380px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #023b1b,
+                    #087a3b
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 40px;
+
+            color: #ffffff;
+
+            text-align: center;
+        }
+
+        .featured-visual-inner {
+            max-width: 380px;
+        }
+
+        .featured-visual .visual-label {
+            display: inline-block;
+
+            padding: 7px 13px;
+
+            border: 1px solid rgba(255,255,255,0.35);
+
+            border-radius: 30px;
+
+            color: #ffffff;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+        .featured-visual h3 {
+            font-size: 42px;
+
+            line-height: 1.05;
+
+            margin-bottom: 15px;
+        }
+
+        .featured-visual p {
+            color: rgba(255,255,255,0.82);
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        .featured-content {
+            padding: 45px;
+        }
+
+        .featured-content .news-meta {
+            color: #087a3b;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        .featured-content h2 {
+            color: #023b1b;
+
+            font-size: 32px;
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+        }
+
+        .featured-content p {
+            color: #66756c;
+
+            line-height: 1.8;
+
+            font-size: 15px;
+
+            margin-bottom: 25px;
+        }
+
+        .news-details {
+            border-top: 1px solid #dce9df;
+
+            padding-top: 20px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .news-detail {
+            background: #f6faf7;
+
+            padding: 14px;
+
+            border-radius: 7px;
+        }
+
+        .news-detail span {
+            display: block;
+
+            color: #66756c;
+
+            font-size: 11px;
+
+            margin-bottom: 3px;
+        }
+
+        .news-detail strong {
+            color: #023b1b;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           NEWS SECTION
+        ========================= */
+
+        .news-section {
+            background: #f6faf7;
+
+            padding: 85px 20px;
+        }
+
+        .news-heading {
+            max-width: 750px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+        }
+
+        .news-heading .label {
+            display: block;
+
+            color: #087a3b;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .news-heading h2 {
+            color: #023b1b;
+
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+        .news-heading p {
+            color: #66756c;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           NEWS GRID
+        ========================= */
+
+        .news-grid-new {
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        /* =========================
+           NEWS CARD
+        ========================= */
+
+        .news-card-new {
+            background: #ffffff;
+
+            border: 1px solid #dce9df;
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 30px rgba(0, 50, 20, 0.06);
+
+            transition: 0.3s ease;
+        }
+
+        .news-card-new:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 18px 40px rgba(0, 50, 20, 0.11);
+        }
+
+
+        /* =========================
+           NEWS CARD IMAGE
+        ========================= */
+
+        .news-card-image {
+            height: 190px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #045526,
+                    #087a3b
+                );
+
+            color: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 25px;
+
+            position: relative;
+        }
+
+        .news-card-image .image-label {
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            border: 1px solid rgba(255,255,255,0.35);
+
+            padding: 7px 12px;
+
+            border-radius: 30px;
+        }
+
+        .news-card-image h3 {
+            font-size: 25px;
+
+            line-height: 1.15;
+
+            margin-top: 13px;
+        }
+
+
+        /* =========================
+           CARD CONTENT
+        ========================= */
+
+        .news-card-content {
+            padding: 25px;
+        }
+
+        .news-card-date {
+            color: #087a3b;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+        .news-card-content h3 {
+            color: #023b1b;
+
+            font-size: 19px;
+
+            line-height: 1.3;
+
+            margin-bottom: 10px;
+        }
+
+        .news-card-content p {
+            color: #66756c;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           MATCH INFORMATION
+        ========================= */
+
+        .match-news-section {
+            padding: 85px 20px;
+        }
+
+        .match-news-card {
+            max-width: 950px;
+
+            margin: auto;
+
+            border: 1px solid #dce9df;
+
+            border-radius: 16px;
+
+            background: #ffffff;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 12px 35px rgba(0, 50, 20, 0.07);
+        }
+
+        .match-news-header {
+            background: #023b1b;
+
+            color: #ffffff;
+
+            padding: 20px 25px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .match-news-header strong {
+            font-size: 14px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+        .match-news-status {
+            background: #087a3b;
+
+            color: #ffffff;
+
+            padding: 7px 13px;
+
+            border-radius: 30px;
+
+            font-size: 11px;
+
+            font-weight: 900;
+        }
+
+        .match-news-body {
+            padding: 35px;
+
+            display: grid;
+
+            grid-template-columns: 1fr auto 1fr;
+
+            align-items: center;
+
+            gap: 25px;
+        }
+
+        .match-team {
+            text-align: center;
+        }
+
+        .match-team img {
+            width: 85px;
+            height: 85px;
+
+            object-fit: contain;
+
+            margin: 0 auto 10px;
+        }
+
+        .match-team h3 {
+            color: #023b1b;
+
+            font-size: 17px;
+        }
+
+        .match-team p {
+            color: #66756c;
+
+            font-size: 12px;
+
+            margin-top: 4px;
+        }
+
+        .match-middle {
+            text-align: center;
+        }
+
+        .match-middle .date {
+            color: #087a3b;
+
+            font-size: 13px;
+
+            font-weight: 900;
+        }
+
+        .match-middle .time {
+            color: #023b1b;
+
+            font-size: 30px;
+
+            font-weight: 900;
+
+            margin: 7px 0;
+        }
+
+        .match-middle .vs {
+            color: #66756c;
+
+            font-size: 12px;
+
+            font-weight: 900;
+        }
+
+        .match-news-footer {
+            background: #f6faf7;
+
+            border-top: 1px solid #dce9df;
+
+            padding: 17px 25px;
+
+            text-align: center;
+
+            color: #045526;
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           FACEBOOK
+        ========================= */
+
+        .social-section {
+            background: #023b1b;
+
+            color: #ffffff;
+
+            padding: 85px 20px;
+        }
+
+        .social-box {
+            max-width: 800px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .social-box .label {
+            display: block;
+
+            color: #8ee0ad;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .social-box h2 {
+            font-size: 36px;
+
+            margin-bottom: 15px;
+        }
+
+        .social-box p {
+            max-width: 650px;
+
+            margin: auto auto 25px;
+
+            color: rgba(255,255,255,0.82);
+
+            line-height: 1.8;
+        }
+
+        .facebook-button {
+            display: inline-block;
+
+            background: #ffffff;
+
+            color: #045526;
+
+            padding: 14px 28px;
+
+            border-radius: 5px;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            transition: 0.3s ease;
+        }
+
+        .facebook-button:hover {
+            background: #eaf8ef;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .site-footer {
+            background: #021f10;
+
+            color: #ffffff;
+
+            padding: 45px 20px 25px;
+        }
+
+        .footer-wrapper {
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .footer-main {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+            padding-bottom: 35px;
+        }
+
+        .footer-brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .footer-brand img {
+            width: 65px;
+
+            height: 65px;
+
+            object-fit: contain;
+        }
+
+        .footer-brand h3 {
+            margin-bottom: 3px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+
+            font-size: 13px;
+        }
+
+        .footer-contact h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-contact p {
+            color: rgba(255,255,255,0.7);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        .footer-bottom {
+            border-top:
+                1px solid rgba(255,255,255,0.12);
+
+            padding-top: 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.65);
+
+            font-size: 12px;
+        }
+
+        .footer-credit a {
+            color: #8ee0ad;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .featured-news {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-visual {
+                min-height: 300px;
+            }
+
+            .news-grid-new {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .news-hero {
+                padding: 75px 20px;
+            }
+
+            .news-intro {
+                padding-top: 60px;
+            }
+
+            .news-intro h2,
+            .news-heading h2 {
+                font-size: 30px;
+            }
+
+            .featured-content {
+                padding: 30px 25px;
+            }
+
+            .featured-content h2 {
+                font-size: 27px;
+            }
+
+            .featured-visual h3 {
+                font-size: 34px;
+            }
+
+            .news-details {
+                grid-template-columns: 1fr;
+            }
+
+            .news-grid-new {
+                grid-template-columns: 1fr;
+            }
+
+            .match-news-body {
+                grid-template-columns: 1fr;
+            }
+
+            .match-middle {
+                order: 2;
+            }
+
+            .match-team:first-child {
+                order: 1;
+            }
+
+            .match-team:last-child {
+                order: 3;
+            }
+
+            .social-box h2 {
+                font-size: 30px;
+            }
+
+            .footer-main {
+                flex-direction: column;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="news-page">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <div class="container navbar">
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="logo.png"
+                alt="Maruleng Football Club Logo"
+            >
+
+            <div class="brand-text">
+
+                <div class="brand-name">
+                    MARULENG FC
+                </div>
+
+                <div class="brand-est">
+                    EST. 2012
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <button class="menu-toggle">
+            MENU
+        </button>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
+            <a href="fixtures.html">
+                Fixtures
+            </a>
+
+            <a href="news.html" class="active">
+                News
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="partnership.html">
+                Partnership
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="news-hero">
+
+    <div class="container">
+
+        <span class="label">
+            Official Club Updates
+        </span>
+
+        <h1>
+            Maruleng FC News
+        </h1>
+
+        <p>
+            Follow the latest news, tournament updates,
+            match information and announcements from
+            Maruleng Football Club.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="news-intro">
+
+    <div class="container">
+
+        <span class="label">
+            Latest From The Club
+        </span>
+
+        <h2>
+            What's Happening at Maruleng FC
+        </h2>
+
+        <p>
+            Stay connected with the club as Maruleng FC continues
+            its journey on and off the football pitch.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURED NEWS
+========================= -->
+
+<section class="featured-news-section">
+
+    <div class="container">
+
+        <article class="featured-news">
+
+
+            <div class="featured-visual">
+
+                <div class="featured-visual-inner">
+
+                    <span class="visual-label">
+                        Club Achievement
+                    </span>
+
+                    <h3>
+                        TOP 8
+                    </h3>
+
+                    <p>
+                        Maruleng FC has qualified for the Top 8
+                        stage of the Top 16 Ground Tournament.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="featured-content">
+
+                <div class="news-meta">
+                    Top 16 Ground Tournament
+                </div>
+
+                <h2>
+                    Maruleng FC Qualifies for the Top 8
+                </h2>
+
+                <p>
+                    Maruleng Football Club has progressed to the
+                    Top 8 stage of the Top 16 Ground Tournament.
+                    The club continues its tournament campaign
+                    with the next match scheduled against
+                    Butshwana Tigers FC.
+                </p>
+
+
+                <div class="news-details">
+
+                    <div class="news-detail">
+
+                        <span>
+                            Next Match
+                        </span>
+
+                        <strong>
+                            3 October 2026
+                        </strong>
+
+                    </div>
+
+
+                    <div class="news-detail">
+
+                        <span>
+                            Match Time
+                        </span>
+
+                        <strong>
+                            13:45
+                        </strong>
+
+                    </div>
+
+
+                    <div class="news-detail">
+
+                        <span>
+                            Opponent
+                        </span>
+
+                        <strong>
+                            Butshwana Tigers FC
+                        </strong>
+
+                    </div>
+
+
+                    <div class="news-detail">
+
+                        <span>
+                            Venue
+                        </span>
+
+                        <strong>
+                            Barcelona Sports Ground
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEWS ARTICLES
+========================= -->
+
+<section class="news-section">
+
+    <div class="container">
+
+        <div class="news-heading">
+
+            <span class="label">
+                Club News
+            </span>
+
+            <h2>
+                Latest Updates
+            </h2>
+
+            <p>
+                Official information and important updates
+                from Maruleng Football Club.
+            </p>
+
+        </div>
+
+
+        <div class="news-grid-new">
+
+
+            <!-- ARTICLE 01 -->
+
+            <article class="news-card-new">
+
+                <div class="news-card-image">
+
+                    <div>
+
+                        <div class="image-label">
+                            Tournament
+                        </div>
+
+                        <h3>
+                            Top 8 Qualified
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="news-card-content">
+
+                    <div class="news-card-date">
+                        Club Update
+                    </div>
+
+                    <h3>
+                        Maruleng FC Reaches the Top 8
+                    </h3>
+
+                    <p>
+                        Maruleng FC has qualified for the Top 8
+                        stage of the Top 16 Ground Tournament.
+                        The club now continues its campaign
+                        in the next stage.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARTICLE 02 -->
+
+            <article class="news-card-new">
+
+                <div class="news-card-image">
+
+                    <div>
+
+                        <div class="image-label">
+                            Match Day
+                        </div>
+
+                        <h3>
+                            Next Match
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="news-card-content">
+
+                    <div class="news-card-date">
+                        Upcoming Fixture
+                    </div>
+
+                    <h3>
+                        Maruleng FC vs Butshwana Tigers FC
+                    </h3>
+
+                    <p>
+                        Maruleng FC will face Butshwana Tigers FC
+                        on 3 October 2026 at 13:45 at Barcelona
+                        Sports Ground.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARTICLE 03 -->
+
+            <article class="news-card-new">
+
+                <div class="news-card-image">
+
+                    <div>
+
+                        <div class="image-label">
+                            Competition
+                        </div>
+
+                        <h3>
+                            Top 16
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="news-card-content">
+
+                    <div class="news-card-date">
+                        Tournament
+                    </div>
+
+                    <h3>
+                        Top 16 Ground Tournament
+                    </h3>
+
+                    <p>
+                        Maruleng FC is competing in the Top 16
+                        Ground Tournament. The tournament is
+                        sponsored by Magopane Liquor Restaurant.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEXT MATCH
+========================= -->
+
+<section class="match-news-section">
+
+    <div class="container">
+
+        <div class="match-news-card">
+
+
+            <div class="match-news-header">
+
+                <strong>
+                    Next Match
+                </strong>
+
+                <span class="match-news-status">
+                    TOP 8
+                </span>
+
+            </div>
+
+
+            <div class="match-news-body">
+
+
+                <!-- MARULENG -->
+
+                <div class="match-team">
+
+                    <img
+                        src="logo.png"
+                        alt="Maruleng Football Club Logo"
+                    >
+
+                    <h3>
+                        Maruleng FC
+                    </h3>
+
+                    <p>
+                        Home Team
+                    </p>
+
+                </div>
+
+
+                <!-- CENTRE -->
+
+                <div class="match-middle">
+
+                    <div class="date">
+                        3 October 2026
+                    </div>
+
+                    <div class="time">
+                        13:45
+                    </div>
+
+                    <div class="vs">
+                        VS
+                    </div>
+
+                </div>
+
+
+                <!-- BUTSHWANA TIGERS -->
+
+                <div class="match-team">
+
+                    <img
+                        src="butshwana-tigers.png"
+                        alt="Butshwana Tigers FC Logo"
+                    >
+
+                    <h3>
+                        Butshwana Tigers FC
+                    </h3>
+
+                    <p>
+                        Opponent
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="match-news-footer">
+
+                Barcelona Sports Ground
+                &nbsp; | &nbsp;
+                Top 16 Ground Tournament
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOCIAL MEDIA
+========================= -->
+
+<section class="social-section">
+
+    <div class="container">
+
+        <div class="social-box">
+
+            <span class="label">
+                Stay Connected
+            </span>
+
+            <h2>
+                Follow Maruleng FC
+            </h2>
+
+            <p>
+                Follow the official Maruleng Football Club Facebook
+                page for match updates, club announcements,
+                photographs and the latest news from the team.
+            </p>
+
+            <!--
+                Replace # with the official Facebook page URL
+                when the exact page link is available.
+            -->
+
+            <a
+                href="#"
+                class="facebook-button"
+            >
+                Follow Our Facebook Page
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-wrapper">
+
+
+        <div class="footer-main">
+
+
+            <div class="footer-brand">
+
+                <img
+                    src="logo.png"
+                    alt="Maruleng Football Club Logo"
+                >
+
+                <div>
+
+                    <h3>
+                        MARULENG FC
+                    </h3>
+
+                    <p>
+                        United by Our Roots, Driven by Our Goals
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    Ga-Sekororo, Mabins Cross
+                </p>
+
+                <p>
+                    WhatsApp: 064 986 9333
+                </p>
+
+                <p>
+                    Manager: Mr Masete
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Maruleng Football Club. All Rights Reserved.
+            </p>
+
+            <p class="footer-credit">
+
+                Website developed in partnership with
+
+                <a
+                    href="https://mphowebsolutions.co.za"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Mpho Web Solutions
+                </a>
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+

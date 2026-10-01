@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Team | Maruleng Football Club</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+    /* =========================
+       TEAM PAGE
+    ========================= */
+
+    .team-page {
+        background: #ffffff;
+        color: #123d28;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .site-header {
+        background: #ffffff;
+        border-bottom: 1px solid #dce9df;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .site-header .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .site-header .navbar {
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #023b1b;
+    }
+
+    .brand img {
+        width: 58px;
+        height: 58px;
+        object-fit: contain;
+    }
+
+    .brand-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .brand-name {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.1;
+    }
+
+    .brand-est {
+        color: #66756c;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-top: 4px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+    }
+
+    .nav-links a {
+        color: #173b28;
+        font-size: 13px;
+        font-weight: 800;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: #087a3b;
+    }
+
+    .menu-toggle {
+        display: none;
+        background: #023b1b;
+        color: #ffffff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: 800;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .team-hero {
+        background: #023b1b;
+        color: #ffffff;
+        padding: 100px 20px;
+        text-align: center;
+    }
+
+    .team-hero .label {
+        display: block;
+        color: #8ee0ad;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    .team-hero h1 {
+        font-size: clamp(40px, 6vw, 65px);
+        line-height: 1.1;
+        margin-bottom: 18px;
+    }
+
+    .team-hero p {
+        max-width: 700px;
+        margin: auto;
+        color: rgba(255,255,255,0.86);
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       TEAM INTRO
+    ========================= */
+
+    .team-intro {
+        padding: 80px 20px 50px;
+    }
+
+    .team-intro-content {
+        max-width: 850px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .team-intro-content .label {
+        display: block;
+        color: #087a3b;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .team-intro-content h2 {
+        color: #023b1b;
+        font-size: clamp(30px, 4vw, 42px);
+        margin-bottom: 15px;
+    }
+
+    .team-intro-content p {
+        color: #66756c;
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+
+    /* =========================
+       PLAYER SECTION
+    ========================= */
+
+    .players-section {
+        background: #f6faf7;
+        padding: 70px 20px 90px;
+    }
+
+    .players-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .players-heading {
+        max-width: 750px;
+        margin: 0 auto 45px;
+        text-align: center;
+    }
+
+    .players-heading .label {
+        display: block;
+        color: #087a3b;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .players-heading h2 {
+        color: #023b1b;
+        font-size: 38px;
+        margin-bottom: 12px;
+    }
+
+    .players-heading p {
+        color: #66756c;
+        line-height: 1.7;
+    }
+
+
+    /* =========================
+       PLAYER GRID
+    ========================= */
+
+    .players-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+    }
+
+    .player-card {
+        background: #ffffff;
+        border: 1px solid #dce9df;
+        border-radius: 14px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .player-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 50, 20, 0.10);
+    }
+
+
+    /* =========================
+       PLAYER PHOTO
+    ========================= */
+
+    .player-photo {
+        height: 270px;
+        background:
+            linear-gradient(
+                145deg,
+                #eaf8ef,
+                #dcefe2
+            );
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    .player-photo::before {
+        content: "";
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        border: 2px solid rgba(8,122,59,0.18);
+        position: absolute;
+    }
+
+    .player-photo::after {
+        content: "PLAYER PHOTO";
+        position: absolute;
+        bottom: 25px;
+        color: #087a3b;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 2px;
+    }
+
+    .player-number {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: #023b1b;
+        color: #ffffff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 20px;
+        font-weight: 900;
+
+        position: relative;
+        z-index: 2;
+    }
+
+
+    /* =========================
+       PLAYER INFORMATION
+    ========================= */
+
+    .player-info {
+        padding: 20px;
+    }
+
+    .player-info h3 {
+        color: #023b1b;
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .player-position {
+        color: #087a3b;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .player-age {
+        color: #66756c;
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       TEAM NOTE
+    ========================= */
+
+    .team-note-section {
+        padding: 90px 20px;
+    }
+
+    .team-note {
+        max-width: 950px;
+        margin: auto;
+
+        background: #023b1b;
+        color: #ffffff;
+
+        border-radius: 18px;
+
+        padding: 55px 45px;
+
+        text-align: center;
+    }
+
+    .team-note .label {
+        display: block;
+        color: #8ee0ad;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    .team-note h2 {
+        font-size: clamp(28px, 4vw, 40px);
+        margin-bottom: 15px;
+    }
+
+    .team-note p {
+        max-width: 700px;
+        margin: auto;
+        color: rgba(255,255,255,0.78);
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       CONTACT SECTION
+    ========================= */
+
+    .team-contact-section {
+        background: #f6faf7;
+        padding: 85px 20px;
+    }
+
+    .team-contact-heading {
+        max-width: 750px;
+        margin: 0 auto 40px;
+        text-align: center;
+    }
+
+    .team-contact-heading .label {
+        display: block;
+        color: #087a3b;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .team-contact-heading h2 {
+        color: #023b1b;
+        font-size: 38px;
+        margin-bottom: 12px;
+    }
+
+    .team-contact-heading p {
+        color: #66756c;
+        line-height: 1.7;
+    }
+
+    .team-contact-grid {
+        max-width: 950px;
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .team-contact-card {
+        background: #ffffff;
+        border: 1px solid #dce9df;
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .team-contact-card .contact-label {
+        display: block;
+        color: #087a3b;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 9px;
+    }
+
+    .team-contact-card h3 {
+        color: #023b1b;
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .team-contact-card p,
+    .team-contact-card a {
+        color: #66756c;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .team-contact-card a {
+        color: #087a3b;
+        font-weight: 800;
+    }
+
+
+    /* =========================
+       FOLLOW SECTION
+    ========================= */
+
+    .follow-section {
+        padding: 85px 20px;
+        text-align: center;
+    }
+
+    .follow-box {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .follow-box .label {
+        display: block;
+        color: #087a3b;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .follow-box h2 {
+        color: #023b1b;
+        font-size: 38px;
+        margin-bottom: 14px;
+    }
+
+    .follow-box p {
+        color: #66756c;
+        max-width: 650px;
+        margin: auto;
+        line-height: 1.8;
+    }
+
+    .follow-button {
+        display: inline-block;
+        margin-top: 25px;
+        background: #087a3b;
+        color: #ffffff;
+        padding: 14px 28px;
+        border-radius: 6px;
+        font-weight: 900;
+        transition: 0.3s;
+    }
+
+    .follow-button:hover {
+        background: #045526;
+        transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .site-footer {
+        background: #021f10;
+        color: #ffffff;
+        padding: 50px 20px 25px;
+    }
+
+    .footer-wrapper {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .footer-main {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        padding-bottom: 40px;
+    }
+
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-brand img {
+        width: 68px;
+        height: 68px;
+        object-fit: contain;
+    }
+
+    .footer-brand h3 {
+        margin-bottom: 4px;
+    }
+
+    .footer-brand p {
+        color: rgba(255,255,255,0.68);
+        font-size: 13px;
+    }
+
+    .footer-contact h4 {
+        margin-bottom: 10px;
+    }
+
+    .footer-contact p {
+        color: rgba(255,255,255,0.68);
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.12);
+        padding-top: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+        color: rgba(255,255,255,0.60);
+        font-size: 12px;
+    }
+
+    .footer-credit a {
+        color: #8ee0ad;
+        font-weight: 800;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 1050px) {
+
+        .players-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .nav-links {
+            gap: 12px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+        }
+
+    }
+
+
+    @media (max-width: 800px) {
+
+        .site-header .navbar {
+            flex-wrap: wrap;
+            padding: 15px 0;
+        }
+
+        .nav-links {
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .players-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .team-contact-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .footer-main {
+            flex-direction: column;
+        }
+
+    }
+
+
+    @media (max-width: 550px) {
+
+        .team-hero {
+            padding: 75px 20px;
+        }
+
+        .team-hero h1 {
+            font-size: 38px;
+        }
+
+        .team-intro {
+            padding: 60px 20px 35px;
+        }
+
+        .players-section {
+            padding: 55px 15px 70px;
+        }
+
+        .players-container {
+            width: 94%;
+        }
+
+        .players-grid {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .player-photo {
+            height: 300px;
+        }
+
+        .team-note {
+            padding: 40px 25px;
+        }
+
+        .team-contact-section,
+        .follow-section {
+            padding: 65px 20px;
+        }
+
+        .team-contact-heading h2,
+        .follow-box h2 {
+            font-size: 30px;
+        }
+
+        .footer-bottom {
+            flex-direction: column;
+            text-align: center;
+        }
+
+    }
+
+</style>
+
+
+</head>
+
+<body class="team-page">
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+
+<div class="container navbar">
+
+    <a href="index.html" class="brand">
+
+        <img
+            src="logo.png"
+            alt="Maruleng Football Club Logo"
+        >
+
+        <div class="brand-text">
+
+            <div class="brand-name">
+                MARULENG FC
+            </div>
+
+            <div class="brand-est">
+                EST. 2012
+            </div>
+
+        </div>
+
+    </a>
+
+
+    <button class="menu-toggle">
+        MENU
+    </button>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="team.html" class="active">
+            Team
+        </a>
+
+        <a href="fixtures.html">
+            Fixtures
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="partnership.html">
+            Partnership
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</div>
+
+
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="team-hero">
+
+
+<div class="container">
+
+    <span class="label">
+        Maruleng Football Club
+    </span>
+
+    <h1>
+        First Team
+    </h1>
+
+    <p>
+        Meet the players representing Maruleng FC on the
+        football field. Player profiles will be updated as
+        official photographs and information become available.
+    </p>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="team-intro">
+
+
+<div class="team-intro-content">
+
+    <span class="label">
+        Our Players
+    </span>
+
+    <h2>
+        The Team Behind Maruleng FC
+    </h2>
+
+    <p>
+        Our players are at the heart of Maruleng Football Club.
+        This section provides space for the official player
+        profiles, including photographs, names, positions and
+        ages.
+    </p>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     PLAYERS
+========================= -->
+
+<section class="players-section">
+
+```
+<div class="players-container">
+
+    <div class="players-heading">
+
+        <span class="label">
+            Squad
+        </span>
+
+        <h2>
+            Maruleng FC Players
+        </h2>
+
+        <p>
+            22 player spaces are available for the official
+            Maruleng FC squad.
+        </p>
+
+    </div>
+
+
+    <div class="players-grid">
+
+
+        <!-- PLAYER 01 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    01
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 01
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 02 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    02
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 02
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 03 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    03
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 03
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 04 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    04
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 04
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 05 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    05
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 05
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 06 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    06
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 06
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 07 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    07
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 07
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 08 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    08
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 08
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 09 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    09
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 09
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 10 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    10
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 10
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 11 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    11
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 11
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 12 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    12
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 12
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 13 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    13
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 13
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 14 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    14
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 14
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 15 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    15
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 15
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 16 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    16
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 16
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 17 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    17
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 17
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 18 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    18
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 18
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 19 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    19
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 19
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 20 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    20
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 20
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 21 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    21
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 21
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PLAYER 22 -->
+
+        <article class="player-card">
+
+            <div class="player-photo">
+
+                <div class="player-number">
+                    22
+                </div>
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>
+                    Player 22
+                </h3>
+
+                <div class="player-position">
+                    Position To Be Confirmed
+                </div>
+
+                <div class="player-age">
+                    Age: To Be Confirmed
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     TEAM MESSAGE
+========================= -->
+
+<section class="team-note-section">
+
+
+<div class="container">
+
+    <div class="team-note">
+
+        <span class="label">
+            Our Squad
+        </span>
+
+        <h2>
+            United by Our Roots,
+            Driven by Our Goals
+        </h2>
+
+        <p>
+            Every player contributes to the identity of
+            Maruleng Football Club. Together, the squad
+            represents the club, the community and the
+            ambitions of Maruleng FC.
+        </p>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="team-contact-section">
+
+
+<div class="container">
+
+    <div class="team-contact-heading">
+
+        <span class="label">
+            Club Information
+        </span>
+
+        <h2>
+            Connect With Maruleng FC
+        </h2>
+
+        <p>
+            For club enquiries, player information and official
+            football matters, contact the club through the
+            details below.
+        </p>
+
+    </div>
+
+
+    <div class="team-contact-grid">
+
+
+        <div class="team-contact-card">
+
+            <span class="contact-label">
+                Club Manager
+            </span>
+
+            <h3>
+                Mr Masete
+            </h3>
+
+            <p>
+                Manager of Maruleng Football Club
+            </p>
+
+            <p>
+                <a href="tel:0772514495">
+                    077 251 4495
+                </a>
+            </p>
+
+            <p>
+                <a href="tel:0795575716">
+                    079 557 5716
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="team-contact-card">
+
+            <span class="contact-label">
+                Club WhatsApp
+            </span>
+
+            <h3>
+                064 986 9333
+            </h3>
+
+            <p>
+                Contact Maruleng FC directly through WhatsApp.
+            </p>
+
+            <p>
+                <a href="https://wa.me/27649869333"
+                   target="_blank"
+                   rel="noopener">
+                    Message the Club
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="team-contact-card">
+
+            <span class="contact-label">
+                Location
+            </span>
+
+            <h3>
+                Ga-Sekororo
+            </h3>
+
+            <p>
+                Mabins Cross
+            </p>
+
+            <p>
+                Limpopo, South Africa
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     FACEBOOK
+========================= -->
+
+<section class="follow-section">
+
+
+<div class="container">
+
+    <div class="follow-box">
+
+        <span class="label">
+            Stay Connected
+        </span>
+
+        <h2>
+            Follow Maruleng Football Club
+        </h2>
+
+        <p>
+            Follow the official Maruleng Football Club
+            Facebook page for match updates, team news,
+            results, announcements and club activities.
+        </p>
+
+        <!-- Replace # with the official Facebook page URL -->
+
+        <a href="#"
+           class="follow-button"
+           target="_blank"
+           rel="noopener">
+            Follow Us on Facebook
+        </a>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+
+<div class="footer-wrapper">
+
+
+    <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+            <img
+                src="logo.png"
+                alt="Maruleng Football Club Logo"
+            >
+
+            <div>
+
+                <h3>
+                    MARULENG FC
+                </h3>
+
+                <p>
+                    United by Our Roots, Driven by Our Goals
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h4>
+                Maruleng Football Club
+            </h4>
+
+            <p>
+                Ga-Sekororo, Mabins Cross
+            </p>
+
+            <p>
+                Limpopo, South Africa
+            </p>
+
+            <p>
+                WhatsApp: 064 986 9333
+            </p>
+
+            <p>
+                Manager: Mr Masete
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Maruleng Football Club.
+            All Rights Reserved.
+        </p>
+
+        <p class="footer-credit">
+
+            Website developed in partnership with
+
+            <a
+                href="https://mphowebsolutions.co.za"
+                target="_blank"
+                rel="noopener"
+            >
+                Mpho Web Solutions
+            </a>
+
+        </p>
+
+    </div>
+
+
+</div>
+
+
+</footer>
+
+</body>
+
+</html>

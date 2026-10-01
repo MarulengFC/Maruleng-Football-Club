@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Partnership | Maruleng Football Club</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           PARTNERSHIP PAGE
+        ========================= */
+
+        .partnership-page {
+            background: #ffffff;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .partnership-hero {
+            background: #023b1b;
+            color: #ffffff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .partnership-hero .label {
+            display: block;
+            color: #8ee0ad;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .partnership-hero h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .partnership-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: rgba(255,255,255,0.85);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           INTRODUCTION
+        ========================= */
+
+        .partnership-intro {
+            padding: 85px 20px 50px;
+            text-align: center;
+        }
+
+        .partnership-intro h2 {
+            color: #023b1b;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .partnership-intro p {
+            max-width: 760px;
+            margin: auto;
+            color: #66756c;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           PARTNERSHIP CARD
+        ========================= */
+
+        .official-partnership {
+            max-width: 1050px;
+            margin: 0 auto 85px;
+            background: #ffffff;
+            border: 1px solid #dce9df;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,50,20,0.08);
+        }
+
+
+        .partnership-title {
+            padding: 40px 30px;
+            background: #f6faf7;
+            border-bottom: 1px solid #dce9df;
+            text-align: center;
+        }
+
+        .partnership-title span {
+            display: block;
+            color: #087a3b;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .partnership-title h2 {
+            color: #023b1b;
+            font-size: 32px;
+        }
+
+
+        /* =========================
+           PARTNERS
+        ========================= */
+
+        .partners {
+            padding: 55px 45px;
+            display: grid;
+            grid-template-columns: 1fr 100px 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .partner {
+            text-align: center;
+        }
+
+        .partner-logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin: 0 auto 20px;
+        }
+
+        .partner h3 {
+            color: #023b1b;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .partner p {
+            color: #66756c;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           MPHO WEB SOLUTIONS
+        ========================= */
+
+        .mws-logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            background: #023b1b;
+            border: 5px solid #087a3b;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 38px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+
+        /* =========================
+           PARTNERSHIP SYMBOL
+        ========================= */
+
+        .partnership-symbol {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: #087a3b;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            font-size: 32px;
+            font-weight: 900;
+        }
+
+
+        /* =========================
+           DESCRIPTION
+        ========================= */
+
+        .partnership-description {
+            padding: 0 45px 55px;
+        }
+
+        .description-box {
+            background: #f6faf7;
+            border: 1px solid #dce9df;
+            border-radius: 12px;
+            padding: 35px;
+        }
+
+        .description-box h3 {
+            color: #023b1b;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .description-box p {
+            color: #66756c;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+
+        .description-box p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           PARTNERSHIP SUPPORT
+        ========================= */
+
+        .support-section {
+            padding: 85px 20px;
+            background: #f6faf7;
+        }
+
+        .support-heading {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 45px;
+        }
+
+        .support-heading span {
+            color: #087a3b;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .support-heading h2 {
+            color: #023b1b;
+            font-size: 38px;
+            margin: 10px 0 15px;
+        }
+
+        .support-heading p {
+            color: #66756c;
+            line-height: 1.7;
+        }
+
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .support-card {
+            background: #ffffff;
+            border: 1px solid #dce9df;
+            border-radius: 12px;
+            padding: 30px 25px;
+            text-align: center;
+        }
+
+        .support-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #087a3b;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+        .support-card h3 {
+            color: #023b1b;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .support-card p {
+            color: #66756c;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           MWS SECTION
+        ========================= */
+
+        .mws-section {
+            padding: 85px 20px;
+            background: #023b1b;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .mws-section h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .mws-section p {
+            max-width: 680px;
+            margin: 0 auto 28px;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.8;
+        }
+
+        .mws-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .mws-button {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 800;
+            transition: 0.3s;
+        }
+
+        .mws-button.primary {
+            background: #087a3b;
+            color: #ffffff;
+        }
+
+        .mws-button.primary:hover {
+            background: #045526;
+        }
+
+        .mws-button.secondary {
+            background: #ffffff;
+            color: #023b1b;
+        }
+
+        .mws-button.secondary:hover {
+            background: #eaf8ef;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .partnership-hero {
+                padding: 75px 20px;
+            }
+
+            .partners {
+                grid-template-columns: 1fr;
+                padding: 45px 25px;
+                gap: 30px;
+            }
+
+            .partnership-symbol {
+                transform: rotate(90deg);
+            }
+
+            .partnership-description {
+                padding: 0 25px 40px;
+            }
+
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .partnership-intro {
+                padding: 60px 20px 35px;
+            }
+
+            .partnership-intro h2 {
+                font-size: 30px;
+            }
+
+            .partnership-title {
+                padding: 35px 20px;
+            }
+
+            .partnership-title h2 {
+                font-size: 26px;
+            }
+
+            .partner-logo,
+            .mws-logo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .mws-logo {
+                font-size: 30px;
+            }
+
+            .description-box {
+                padding: 25px 20px;
+            }
+
+            .support-section {
+                padding: 65px 20px;
+            }
+
+            .support-heading h2 {
+                font-size: 30px;
+            }
+
+            .mws-section {
+                padding: 65px 20px;
+            }
+
+            .mws-section h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <div class="container navbar">
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="logo.png"
+                alt="Maruleng Football Club Logo"
+            >
+
+            <div class="brand-text">
+
+                <div class="brand-name">
+                    MARULENG FC
+                </div>
+
+                <div class="brand-est">
+                    EST. 2012
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <button class="menu-toggle">
+            MENU
+        </button>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
+            <a href="fixtures.html">
+                Fixtures
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="partnership.html" class="active">
+                Partnership
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="partnership-hero">
+
+    <div class="container">
+
+        <span class="label">
+            Official Partnership
+        </span>
+
+        <h1>
+            Maruleng FC &amp;<br>
+            Mpho Web Solutions
+        </h1>
+
+        <p>
+            A digital partnership supporting the online presence
+            of Maruleng Football Club.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="partnership-intro">
+
+    <div class="container">
+
+        <h2>
+            Our Partnership
+        </h2>
+
+        <p>
+            Maruleng Football Club has partnered with Mpho Web Solutions
+            to develop and support the club's official website and
+            digital presence.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PARTNERSHIP
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="official-partnership">
+
+
+            <div class="partnership-title">
+
+                <span>
+                    Maruleng Football Club
+                </span>
+
+                <h2>
+                    United by Our Roots, Driven by Our Goals
+                </h2>
+
+            </div>
+
+
+            <div class="partners">
+
+
+                <!-- MARULENG FC -->
+
+                <div class="partner">
+
+                    <img
+                        src="logo.png"
+                        alt="Maruleng Football Club Logo"
+                        class="partner-logo"
+                    >
+
+                    <h3>
+                        Maruleng Football Club
+                    </h3>
+
+                    <p>
+                        Established in 2012<br>
+                        Ga-Sekororo, Mabins Cross
+                    </p>
+
+                </div>
+
+
+                <!-- PARTNERSHIP -->
+
+                <div class="partnership-symbol">
+                    ×
+                </div>
+
+
+                <!-- MPHO WEB SOLUTIONS -->
+
+                <div class="partner">
+
+                    <div class="mws-logo">
+                        MWS
+                    </div>
+
+                    <h3>
+                        Mpho Web Solutions
+                    </h3>
+
+                    <p>
+                        Website Development<br>
+                        Digital Solutions
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="partnership-description">
+
+                <div class="description-box">
+
+                    <h3>
+                        About the Partnership
+                    </h3>
+
+                    <p>
+                        Mpho Web Solutions is responsible for the
+                        development and digital presentation of the
+                        Maruleng Football Club website.
+                    </p>
+
+                    <p>
+                        The website provides supporters, players,
+                        members and the wider community with access to
+                        official club information in one place.
+                    </p>
+
+                    <p>
+                        The platform includes information about the
+                        club, team profiles, fixtures, results, news,
+                        photographs and other club activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DIGITAL SUPPORT
+========================= -->
+
+<section class="support-section">
+
+    <div class="container">
+
+        <div class="support-heading">
+
+            <span>
+                Digital Support
+            </span>
+
+            <h2>
+                Partnership Focus
+            </h2>
+
+            <p>
+                The partnership focuses on creating and maintaining
+                a professional digital platform for Maruleng FC.
+            </p>
+
+        </div>
+
+
+        <div class="support-grid">
+
+
+            <div class="support-card">
+
+                <div class="support-number">
+                    01
+                </div>
+
+                <h3>
+                    Official Website
+                </h3>
+
+                <p>
+                    A dedicated online platform representing
+                    Maruleng Football Club.
+                </p>
+
+            </div>
+
+
+            <div class="support-card">
+
+                <div class="support-number">
+                    02
+                </div>
+
+                <h3>
+                    Club Information
+                </h3>
+
+                <p>
+                    A central place for team information,
+                    fixtures, results, news and club updates.
+                </p>
+
+            </div>
+
+
+            <div class="support-card">
+
+                <div class="support-number">
+                    03
+                </div>
+
+                <h3>
+                    Digital Presence
+                </h3>
+
+                <p>
+                    Professional online presentation of the
+                    club and its activities.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MPHO WEB SOLUTIONS
+========================= -->
+
+<section class="mws-section">
+
+    <div class="container">
+
+        <h2>
+            Mpho Web Solutions
+        </h2>
+
+        <p>
+            Website development and digital solutions for
+            businesses, organisations, sports teams and
+            community projects.
+        </p>
+
+        <div class="mws-buttons">
+
+            <a
+                href="https://mphowebsolutions.co.za"
+                target="_blank"
+                rel="noopener"
+                class="mws-button primary"
+            >
+                Visit Mpho Web Solutions
+            </a>
+
+            <a
+                href="https://wa.me/27649869333"
+                target="_blank"
+                rel="noopener"
+                class="mws-button secondary"
+            >
+                Contact Mpho Web Solutions
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Maruleng Football Club. All Rights Reserved.
+            </p>
+
+            <p class="footer-credit">
+
+                Website partnership by
+
+                <a
+                    href="https://mphowebsolutions.co.za"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Mpho Web Solutions
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
+

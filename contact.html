@@ -1,0 +1,1088 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Maruleng Football Club</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           CONTACT PAGE
+        ========================= */
+
+        .contact-page {
+            background: #ffffff;
+        }
+
+
+        /* =========================
+           PAGE HERO
+        ========================= */
+
+        .contact-hero {
+            background: #023b1b;
+            color: #ffffff;
+            padding: 95px 20px;
+            text-align: center;
+        }
+
+        .contact-hero .label {
+            display: block;
+            color: #8ee0ad;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .contact-hero h1 {
+            font-size: clamp(40px, 6vw, 62px);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .contact-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: rgba(255,255,255,0.86);
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .contact-intro {
+            padding: 75px 20px 45px;
+            text-align: center;
+        }
+
+        .contact-intro h2 {
+            color: #023b1b;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro p {
+            max-width: 720px;
+            margin: auto;
+            color: #66756c;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           CONTACT GRID
+        ========================= */
+
+        .contact-section {
+            padding: 25px 20px 85px;
+        }
+
+        .contact-grid {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+
+        /* =========================
+           CONTACT CARD
+        ========================= */
+
+        .contact-card {
+            background: #ffffff;
+            border: 1px solid #dce9df;
+            border-radius: 14px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0, 50, 20, 0.06);
+            transition: 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 38px rgba(0, 50, 20, 0.10);
+        }
+
+        .contact-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #eaf8ef;
+            color: #087a3b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        .contact-card h3 {
+            color: #023b1b;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: #66756c;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .contact-card strong {
+            color: #045526;
+        }
+
+        .contact-card a {
+            color: #087a3b;
+            font-weight: 800;
+            word-break: break-word;
+        }
+
+        .contact-card a:hover {
+            color: #045526;
+        }
+
+
+        /* =========================
+           MANAGER CONTACT
+        ========================= */
+
+        .manager-section {
+            background: #f6faf7;
+            padding: 85px 20px;
+        }
+
+        .manager-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+        }
+
+        .manager-heading .label {
+            display: block;
+            color: #087a3b;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .manager-heading h2 {
+            color: #023b1b;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .manager-heading p {
+            color: #66756c;
+            line-height: 1.7;
+        }
+
+
+        .manager-card {
+            max-width: 850px;
+            margin: auto;
+            background: #ffffff;
+            border: 1px solid #dce9df;
+            border-radius: 16px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            box-shadow: 0 12px 35px rgba(0, 50, 20, 0.07);
+        }
+
+        .manager-info h3 {
+            color: #023b1b;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .manager-role {
+            color: #087a3b;
+            font-size: 14px;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .manager-info p {
+            color: #66756c;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .manager-contacts {
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .manager-contact {
+            padding: 12px 15px;
+            background: #eaf8ef;
+            border-radius: 7px;
+        }
+
+        .manager-contact span {
+            display: block;
+            color: #66756c;
+            font-size: 11px;
+            margin-bottom: 3px;
+        }
+
+        .manager-contact a {
+            color: #045526;
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+
+        /* =========================
+           WHATSAPP SECTION
+        ========================= */
+
+        .whatsapp-section {
+            padding: 85px 20px;
+        }
+
+        .whatsapp-card {
+            max-width: 850px;
+            margin: auto;
+            background: #023b1b;
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 50px 35px;
+            text-align: center;
+        }
+
+        .whatsapp-card .small-label {
+            color: #8ee0ad;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .whatsapp-card h2 {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .whatsapp-card p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.7;
+        }
+
+        .whatsapp-number {
+            display: block;
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 25px;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background: #ffffff;
+            color: #045526;
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 900;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background: #eaf8ef;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           FACEBOOK SECTION
+        ========================= */
+
+        .facebook-section {
+            background: #f6faf7;
+            padding: 75px 20px;
+            text-align: center;
+        }
+
+        .facebook-box {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .facebook-box h2 {
+            color: #023b1b;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .facebook-box p {
+            color: #66756c;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .facebook-button {
+            display: inline-block;
+            background: #087a3b;
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-weight: 900;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .facebook-button:hover {
+            background: #045526;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           LOCATION
+        ========================= */
+
+        .location-section {
+            padding: 85px 20px;
+        }
+
+        .location-card {
+            max-width: 900px;
+            margin: auto;
+            border: 1px solid #dce9df;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .location-card h2 {
+            color: #023b1b;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .location-card p {
+            color: #66756c;
+            line-height: 1.8;
+        }
+
+        .location-name {
+            color: #087a3b;
+            font-size: 20px;
+            font-weight: 900;
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .site-footer {
+            background: #021f10;
+            color: #ffffff;
+            padding: 45px 20px 25px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-main {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            padding-bottom: 35px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-brand img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .footer-brand h3 {
+            margin-bottom: 3px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+        }
+
+        .footer-contact h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-contact p {
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.65);
+            font-size: 12px;
+        }
+
+        .footer-credit a {
+            color: #8ee0ad;
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .manager-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .manager-contacts {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .footer-main {
+                flex-direction: column;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .contact-hero {
+                padding: 75px 20px;
+            }
+
+            .contact-intro {
+                padding-top: 60px;
+            }
+
+            .contact-intro h2,
+            .manager-heading h2 {
+                font-size: 30px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section,
+            .manager-section,
+            .whatsapp-section,
+            .location-section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .manager-card {
+                padding: 30px 20px;
+            }
+
+            .whatsapp-card {
+                padding: 40px 20px;
+            }
+
+            .whatsapp-card h2 {
+                font-size: 28px;
+            }
+
+            .location-card {
+                padding: 30px 20px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="contact-page">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <div class="container navbar">
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="logo.png"
+                alt="Maruleng Football Club Logo"
+            >
+
+            <div class="brand-text">
+
+                <div class="brand-name">
+                    MARULENG FC
+                </div>
+
+                <div class="brand-est">
+                    EST. 2012
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <button class="menu-toggle">
+            MENU
+        </button>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
+            <a href="fixtures.html">
+                Fixtures
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="partnership.html">
+                Partnership
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="contact-hero">
+
+    <div class="container">
+
+        <span class="label">
+            Get In Touch
+        </span>
+
+        <h1>
+            Contact Maruleng FC
+        </h1>
+
+        <p>
+            For club enquiries, match information, football matters
+            and official communication, contact Maruleng Football Club
+            through the details below.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="contact-intro">
+
+    <div class="container">
+
+        <h2>
+            Contact Information
+        </h2>
+
+        <p>
+            Maruleng Football Club welcomes supporters, players,
+            community members, tournament organisers and potential
+            partners to get in touch with the club.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT CARDS
+========================= -->
+
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+
+            <!-- LOCATION -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    +
+                </div>
+
+                <h3>
+                    Club Location
+                </h3>
+
+                <p>
+                    <strong>Ga-Sekororo</strong>
+                </p>
+
+                <p>
+                    Mabins Cross
+                </p>
+
+                <p>
+                    Limpopo, South Africa
+                </p>
+
+            </div>
+
+
+            <!-- CLUB WHATSAPP -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    W
+                </div>
+
+                <h3>
+                    Club WhatsApp
+                </h3>
+
+                <p>
+                    Contact the club directly through WhatsApp.
+                </p>
+
+                <p>
+                    <a
+                        href="https://wa.me/27649869333"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        064 986 9333
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- FACEBOOK -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    F
+                </div>
+
+                <h3>
+                    Facebook
+                </h3>
+
+                <p>
+                    Follow Maruleng Football Club on Facebook
+                    for club updates and announcements.
+                </p>
+
+                <p>
+                    <strong>
+                        Maruleng Football Club
+                    </strong>
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MANAGER
+========================= -->
+
+<section class="manager-section">
+
+    <div class="container">
+
+        <div class="manager-heading">
+
+            <span class="label">
+                Official Club Contact
+            </span>
+
+            <h2>
+                Club Management
+            </h2>
+
+            <p>
+                For official club enquiries and management matters,
+                contact the Maruleng FC manager.
+            </p>
+
+        </div>
+
+
+        <div class="manager-card">
+
+
+            <div class="manager-info">
+
+                <h3>
+                    Mr Masete
+                </h3>
+
+                <div class="manager-role">
+                    Club Manager
+                </div>
+
+                <p>
+                    Mr Masete is the official manager of
+                    Maruleng Football Club.
+                </p>
+
+            </div>
+
+
+            <div class="manager-contacts">
+
+                <div class="manager-contact">
+
+                    <span>
+                        Contact Number
+                    </span>
+
+                    <a href="tel:0772514495">
+                        077 251 4495
+                    </a>
+
+                </div>
+
+
+                <div class="manager-contact">
+
+                    <span>
+                        Alternative Number
+                    </span>
+
+                    <a href="tel:0795575716">
+                        079 557 5716
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<section class="whatsapp-section">
+
+    <div class="container">
+
+        <div class="whatsapp-card">
+
+            <div class="small-label">
+                Direct Contact
+            </div>
+
+            <h2>
+                Contact Maruleng FC on WhatsApp
+            </h2>
+
+            <p>
+                Send the club a WhatsApp message for general enquiries,
+                football matters, match information or other official
+                communication.
+            </p>
+
+            <a
+                href="https://wa.me/27649869333"
+                target="_blank"
+                rel="noopener"
+                class="whatsapp-number"
+            >
+                064 986 9333
+            </a>
+
+            <a
+                href="https://wa.me/27649869333"
+                target="_blank"
+                rel="noopener"
+                class="whatsapp-button"
+            >
+                Message Maruleng FC
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FACEBOOK
+========================= -->
+
+<section class="facebook-section">
+
+    <div class="container">
+
+        <div class="facebook-box">
+
+            <h2>
+                Follow Maruleng Football Club
+            </h2>
+
+            <p>
+                Follow the official Maruleng Football Club Facebook
+                page for match updates, club news, announcements,
+                photographs and other activities.
+            </p>
+
+            <!--
+                Replace the # below with the official
+                Maruleng FC Facebook page URL when available.
+            -->
+
+            <a
+                href="#"
+                class="facebook-button"
+            >
+                Follow Us on Facebook
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOCATION
+========================= -->
+
+<section class="location-section">
+
+    <div class="container">
+
+        <div class="location-card">
+
+            <h2>
+                Our Home
+            </h2>
+
+            <p>
+                Maruleng Football Club is based in
+            </p>
+
+            <div class="location-name">
+                Ga-Sekororo, Mabins Cross
+            </div>
+
+            <p>
+                Limpopo, South Africa
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-main">
+
+
+            <div class="footer-brand">
+
+                <img
+                    src="logo.png"
+                    alt="Maruleng Football Club Logo"
+                >
+
+                <div>
+
+                    <h3>
+                        MARULENG FC
+                    </h3>
+
+                    <p>
+                        United by Our Roots, Driven by Our Goals
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    Mr Masete — Club Manager
+                </p>
+
+                <p>
+                    077 251 4495
+                </p>
+
+                <p>
+                    079 557 5716
+                </p>
+
+                <p>
+                    WhatsApp: 064 986 9333
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Maruleng Football Club. All Rights Reserved.
+            </p>
+
+            <p class="footer-credit">
+
+                Website developed in partnership with
+
+                <a
+                    href="https://mphowebsolutions.co.za"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Mpho Web Solutions
+                </a>
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+

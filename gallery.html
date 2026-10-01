@@ -1,0 +1,1209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Maruleng Football Club</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           GALLERY PAGE
+        ========================= */
+
+        .gallery-page {
+            background: #ffffff;
+            color: #123d28;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .gallery-hero {
+            background: #023b1b;
+            color: #ffffff;
+            padding: 95px 20px;
+            text-align: center;
+        }
+
+        .gallery-hero .label {
+            display: block;
+            color: #8ee0ad;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .gallery-hero h1 {
+            font-size: clamp(40px, 6vw, 62px);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .gallery-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: rgba(255,255,255,0.86);
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .gallery-intro {
+            padding: 75px 20px 45px;
+            text-align: center;
+        }
+
+        .gallery-intro .label {
+            display: block;
+            color: #087a3b;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .gallery-intro h2 {
+            color: #023b1b;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .gallery-intro p {
+            max-width: 720px;
+            margin: auto;
+            color: #66756c;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GALLERY SECTION
+        ========================= */
+
+        .gallery-section {
+            padding: 25px 20px 90px;
+        }
+
+        .gallery-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           CATEGORY HEADING
+        ========================= */
+
+        .gallery-category {
+            max-width: 1000px;
+            margin: 0 auto 30px;
+        }
+
+        .gallery-category h3 {
+            color: #023b1b;
+            font-size: 25px;
+            margin-bottom: 7px;
+        }
+
+        .gallery-category p {
+            color: #66756c;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           GALLERY GRID
+        ========================= */
+
+        .gallery-grid {
+            max-width: 1000px;
+            margin: 0 auto 70px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        /* =========================
+           GALLERY CARD
+        ========================= */
+
+        .gallery-card {
+            position: relative;
+
+            background: #ffffff;
+
+            border: 1px solid #dce9df;
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            box-shadow: 0 10px 30px rgba(0, 50, 20, 0.06);
+
+            transition: 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 18px 40px rgba(0, 50, 20, 0.12);
+        }
+
+
+        /* =========================
+           IMAGE AREA
+        ========================= */
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf8ef,
+                    #dcefe2
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* =========================
+           PLACEHOLDER
+        ========================= */
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            color: #045526;
+
+            padding: 20px;
+        }
+
+        .placeholder-mark {
+            width: 58px;
+            height: 58px;
+
+            border-radius: 50%;
+
+            background: #087a3b;
+            color: #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+            font-weight: 900;
+
+            margin-bottom: 12px;
+        }
+
+        .gallery-placeholder strong {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .gallery-placeholder span {
+            color: #66756c;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           CAPTION
+        ========================= */
+
+        .gallery-caption {
+            padding: 18px 18px 20px;
+        }
+
+        .gallery-caption h4 {
+            color: #023b1b;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .gallery-caption p {
+            color: #66756c;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           FEATURED CARD
+        ========================= */
+
+        .gallery-card.featured {
+            grid-column: span 2;
+        }
+
+        .gallery-card.featured .gallery-image {
+            height: 330px;
+        }
+
+
+        /* =========================
+           CLUB MESSAGE
+        ========================= */
+
+        .gallery-message-section {
+            background: #f6faf7;
+            padding: 85px 20px;
+        }
+
+        .gallery-message {
+            max-width: 850px;
+            margin: auto;
+
+            text-align: center;
+
+            background: #ffffff;
+
+            border: 1px solid #dce9df;
+
+            border-radius: 16px;
+
+            padding: 50px 30px;
+
+            box-shadow:
+                0 12px 35px rgba(0, 50, 20, 0.06);
+        }
+
+        .gallery-message .label {
+            display: block;
+
+            color: #087a3b;
+
+            font-size: 12px;
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .gallery-message h2 {
+            color: #023b1b;
+
+            font-size: 34px;
+
+            margin-bottom: 12px;
+        }
+
+        .gallery-message p {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #66756c;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .site-footer {
+            background: #021f10;
+
+            color: #ffffff;
+
+            padding: 45px 20px 25px;
+        }
+
+        .footer-wrapper {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-main {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+            padding-bottom: 35px;
+        }
+
+        .footer-brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .footer-brand img {
+            width: 65px;
+            height: 65px;
+
+            object-fit: contain;
+        }
+
+        .footer-brand h3 {
+            margin-bottom: 3px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+
+            font-size: 13px;
+        }
+
+        .footer-contact h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-contact p {
+            color: rgba(255,255,255,0.7);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        .footer-bottom {
+            border-top:
+                1px solid rgba(255,255,255,0.12);
+
+            padding-top: 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.65);
+
+            font-size: 12px;
+        }
+
+        .footer-credit a {
+            color: #8ee0ad;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-card.featured {
+                grid-column: span 2;
+            }
+
+            .footer-main {
+                flex-direction: column;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .gallery-hero {
+                padding: 75px 20px;
+            }
+
+            .gallery-intro {
+                padding-top: 60px;
+            }
+
+            .gallery-intro h2 {
+                font-size: 30px;
+            }
+
+            .gallery-section {
+                padding-bottom: 60px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-card.featured {
+                grid-column: span 1;
+            }
+
+            .gallery-image,
+            .gallery-card.featured .gallery-image {
+                height: 240px;
+            }
+
+            .gallery-message {
+                padding: 40px 20px;
+            }
+
+            .gallery-message h2 {
+                font-size: 28px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="gallery-page">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <div class="container navbar">
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="logo.png"
+                alt="Maruleng Football Club Logo"
+            >
+
+            <div class="brand-text">
+
+                <div class="brand-name">
+                    MARULENG FC
+                </div>
+
+                <div class="brand-est">
+                    EST. 2012
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <button class="menu-toggle">
+            MENU
+        </button>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
+            <a href="fixtures.html">
+                Fixtures
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="gallery.html" class="active">
+                Gallery
+            </a>
+
+            <a href="partnership.html">
+                Partnership
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="gallery-hero">
+
+    <div class="container">
+
+        <span class="label">
+            Club Moments
+        </span>
+
+        <h1>
+            Maruleng FC Gallery
+        </h1>
+
+        <p>
+            A collection of moments from Maruleng Football Club,
+            celebrating the players, matches, supporters and
+            football community.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="gallery-intro">
+
+    <div class="container">
+
+        <span class="label">
+            Official Club Photos
+        </span>
+
+        <h2>
+            Moments That Matter
+        </h2>
+
+        <p>
+            This gallery will showcase photographs from Maruleng FC
+            matches, training sessions, tournaments, team activities
+            and community events.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery-section">
+
+    <div class="gallery-container">
+
+
+        <!-- =====================
+             MATCHES
+        ====================== -->
+
+        <div class="gallery-category">
+
+            <h3>
+                Matches &amp; Tournaments
+            </h3>
+
+            <p>
+                Match-day moments and tournament memories.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <!-- PHOTO 01 -->
+
+            <div class="gallery-card featured">
+
+                <div class="gallery-image">
+
+                    <!--
+                        Replace the placeholder below with:
+
+                        <img src="gallery/gallery1.jpg"
+                             alt="Maruleng FC match day">
+                    -->
+
+                    <div class="gallery-placeholder">
+
+                        <div class="placeholder-mark">
+                            01
+                        </div>
+
+                        <strong>
+                            Match Day
+                        </strong>
+
+                        <span>
+                            Photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-caption">
+
+                    <h4>
+                        Match Day
+                    </h4>
+
+                    <p>
+                        Maruleng FC competing on match day.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 02 -->
+
+            <div class="gallery-card">
+
+                <div class="gallery-image">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="placeholder-mark">
+                            02
+                        </div>
+
+                        <strong>
+                            Tournament
+                        </strong>
+
+                        <span>
+                            Photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-caption">
+
+                    <h4>
+                        Tournament Action
+                    </h4>
+
+                    <p>
+                        Maruleng FC in tournament action.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 03 -->
+
+            <div class="gallery-card">
+
+                <div class="gallery-image">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="placeholder-mark">
+                            03
+                        </div>
+
+                        <strong>
+                            Football Action
+                        </strong>
+
+                        <span>
+                            Photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-caption">
+
+                    <h4>
+                        On The Pitch
+                    </h4>
+
+                    <p>
+                        Players representing Maruleng FC.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =====================
+             TEAM
+        ====================== -->
+
+        <div class="gallery-category">
+
+            <h3>
+                Team &amp; Club
+            </h3>
+
+            <p>
+                Team photographs, players and club activities.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <!-- PHOTO 04 -->
+
+            <div class="gallery-card">
+
+                <div class="gallery-image">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="placeholder-mark">
+                            04
+                        </div>
+
+                        <strong>
+                            Team Photo
+                        </strong>
+
+                        <span>
+                            Photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-caption">
+
+                    <h4>
+                        Maruleng FC Team
+                    </h4>
+
+                    <p>
+                        Official team photograph.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 05 -->
+
+            <div class="gallery-card">
+
+                <div class="gallery-image">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="placeholder-mark">
+                            05
+                        </div>
+
+                        <strong>
+                            Players
+                        </strong>
+
+                        <span>
+                            Photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-caption">
+
+                    <h4>
+                        The Players
+                    </h4>
+
+                    <p>
+                        The players representing the club.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 06 -->
+
+            <div class="gallery-card">
+
+                <div class="gallery-image">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="placeholder-mark">
+                            06
+                        </div>
+
+                        <strong>
+                            Club Activity
+                        </strong>
+
+                        <span>
+                            Photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-caption">
+
+                    <h4>
+                        Club Activities
+                    </h4>
+
+                    <p>
+                        Moments from around the football club.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =====================
+             COMMUNITY
+        ====================== -->
+
+        <div class="gallery-category">
+
+            <h3>
+                Community &amp; Supporters
+            </h3>
+
+            <p>
+                Celebrating the people and community behind the club.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <!-- PHOTO 07 -->
+
+            <div class="gallery-card">
+
+                <div class="gallery-image">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="placeholder-mark">
+                            07
+                        </div>
+
+                        <strong>
+                            Supporters
+                        </strong>
+
+                        <span>
+                            Photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-caption">
+
+                    <h4>
+                        Maruleng Supporters
+                    </h4>
+
+                    <p>
+                        The supporters behind Maruleng FC.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 08 -->
+
+            <div class="gallery-card">
+
+                <div class="gallery-image">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="placeholder-mark">
+                            08
+                        </div>
+
+                        <strong>
+                            Community
+                        </strong>
+
+                        <span>
+                            Photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-caption">
+
+                    <h4>
+                        Our Community
+                    </h4>
+
+                    <p>
+                        Maruleng FC and the local community.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 09 -->
+
+            <div class="gallery-card">
+
+                <div class="gallery-image">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="placeholder-mark">
+                            09
+                        </div>
+
+                        <strong>
+                            Club Memories
+                        </strong>
+
+                        <span>
+                            Photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="gallery-caption">
+
+                    <h4>
+                        Club Memories
+                    </h4>
+
+                    <p>
+                        More moments from Maruleng Football Club.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section class="gallery-message-section">
+
+    <div class="container">
+
+        <div class="gallery-message">
+
+            <span class="label">
+                Maruleng Football Club
+            </span>
+
+            <h2>
+                United by Our Roots
+            </h2>
+
+            <p>
+                Every match, every player and every supporter
+                contributes to the story of Maruleng Football Club.
+                More official photographs will be added to this
+                gallery as the season continues.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-wrapper">
+
+
+        <div class="footer-main">
+
+
+            <div class="footer-brand">
+
+                <img
+                    src="logo.png"
+                    alt="Maruleng Football Club Logo"
+                >
+
+                <div>
+
+                    <h3>
+                        MARULENG FC
+                    </h3>
+
+                    <p>
+                        United by Our Roots, Driven by Our Goals
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    Ga-Sekororo, Mabins Cross
+                </p>
+
+                <p>
+                    WhatsApp: 064 986 9333
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Maruleng Football Club. All Rights Reserved.
+            </p>
+
+            <p class="footer-credit">
+
+                Website developed in partnership with
+
+                <a
+                    href="https://mphowebsolutions.co.za"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Mpho Web Solutions
+                </a>
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+
