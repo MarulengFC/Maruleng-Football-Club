@@ -7,8 +7,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Maruleng FC | Official Football Club</title>
 
@@ -17,900 +16,19 @@
 
 <link rel="stylesheet" href="style.css">
 
-<style>
-
-    /* =========================
-       HOME PAGE
-    ========================= */
-
-    .home-page {
-        background: #ffffff;
-        color: #123d28;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .home-hero {
-        min-height: 680px;
-
-        background:
-            linear-gradient(
-                rgba(2, 59, 27, 0.94),
-                rgba(4, 85, 38, 0.94)
-            );
-
-        color: #ffffff;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        text-align: center;
-
-        position: relative;
-        overflow: hidden;
-
-        padding: 80px 20px;
-    }
-
-
-    /* Decorative club crest behind hero */
-
-    .home-hero::before {
-        content: "";
-
-        position: absolute;
-
-        width: 650px;
-        height: 650px;
-
-        background-image: url("logo.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-
-        opacity: 0.035;
-
-        top: 50%;
-        left: 50%;
-
-        transform: translate(-50%, -50%);
-
-        pointer-events: none;
-    }
-
-
-    .home-hero-content {
-        position: relative;
-        z-index: 2;
-
-        max-width: 900px;
-        width: 100%;
-
-        margin: auto;
-    }
-
-
-    /* Main inward logo */
-
-    .home-hero-logo {
-        width: 175px;
-        height: 175px;
-
-        object-fit: contain;
-
-        display: block;
-
-        margin: 0 auto 28px;
-
-        user-select: none;
-        -webkit-user-drag: none;
-        pointer-events: none;
-
-        filter:
-            drop-shadow(
-                0 12px 25px rgba(0,0,0,0.22)
-            );
-    }
-
-
-    .home-hero h1 {
-        font-size: clamp(40px, 6vw, 70px);
-
-        line-height: 1.05;
-
-        margin-bottom: 12px;
-
-        letter-spacing: 1px;
-    }
-
-
-    .home-hero-est {
-        color: #8ee0ad;
-
-        font-size: 13px;
-
-        font-weight: 900;
-
-        letter-spacing: 3px;
-
-        margin-bottom: 18px;
-    }
-
-
-    .home-hero-slogan {
-        font-size: clamp(18px, 3vw, 27px);
-
-        font-weight: 500;
-
-        margin-bottom: 14px;
-    }
-
-
-    .home-hero-location {
-        color: rgba(255,255,255,0.78);
-
-        font-size: 14px;
-
-        letter-spacing: 1px;
-    }
-
-
-    .home-hero-buttons {
-        display: flex;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 12px;
-
-        margin-top: 32px;
-    }
-
-
-    .home-btn {
-        display: inline-block;
-
-        padding: 14px 25px;
-
-        border-radius: 6px;
-
-        font-size: 14px;
-
-        font-weight: 900;
-
-        transition: 0.3s;
-    }
-
-
-    .home-btn-white {
-        background: #ffffff;
-
-        color: #045526;
-    }
-
-
-    .home-btn-white:hover {
-        background: #eaf8ef;
-
-        transform: translateY(-2px);
-    }
-
-
-    .home-btn-outline {
-        border: 2px solid #ffffff;
-
-        color: #ffffff;
-    }
-
-
-    .home-btn-outline:hover {
-        background: #ffffff;
-
-        color: #045526;
-
-        transform: translateY(-2px);
-    }
-
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
-
-    .home-section {
-        padding: 85px 20px;
-    }
-
-
-    .home-container {
-        width: 90%;
-
-        max-width: 1200px;
-
-        margin: auto;
-    }
-
-
-    .home-heading {
-        max-width: 760px;
-
-        margin: 0 auto 45px;
-
-        text-align: center;
-    }
-
-
-    .home-heading .small-title {
-        display: block;
-
-        color: #087a3b;
-
-        font-size: 12px;
-
-        font-weight: 900;
-
-        letter-spacing: 2px;
-
-        text-transform: uppercase;
-
-        margin-bottom: 10px;
-    }
-
-
-    .home-heading h2 {
-        color: #023b1b;
-
-        font-size: clamp(30px, 4vw, 42px);
-
-        line-height: 1.15;
-
-        margin-bottom: 14px;
-    }
-
-
-    .home-heading p {
-        color: #66756c;
-
-        line-height: 1.8;
-    }
-
-
-    /* =========================
-       TOP 8
-    ========================= */
-
-    .qualification {
-        max-width: 850px;
-
-        margin: auto;
-
-        background: #eaf8ef;
-
-        border: 1px solid #cfe5d6;
-
-        border-radius: 15px;
-
-        padding: 40px 30px;
-
-        text-align: center;
-    }
-
-
-    .qualification .tournament-name {
-        color: #087a3b;
-
-        font-size: 12px;
-
-        font-weight: 900;
-
-        letter-spacing: 2px;
-
-        margin-bottom: 12px;
-    }
-
-
-    .qualification h2 {
-        color: #023b1b;
-
-        font-size: clamp(30px, 4vw, 45px);
-
-        margin-bottom: 12px;
-    }
-
-
-    .qualification p {
-        color: #66756c;
-
-        max-width: 650px;
-
-        margin: auto;
-
-        line-height: 1.8;
-    }
-
-
-    /* =========================
-       MATCH
-    ========================= */
-
-    .match-section {
-        background: #f6faf7;
-    }
-
-
-    .match-card {
-        max-width: 950px;
-
-        margin: auto;
-
-        background: #ffffff;
-
-        border: 1px solid #dce9df;
-
-        border-radius: 15px;
-
-        overflow: hidden;
-
-        box-shadow:
-            0 12px 35px rgba(0,50,20,0.07);
-    }
-
-
-    .match-header {
-        background: #023b1b;
-
-        color: #ffffff;
-
-        padding: 18px 25px;
-
-        display: flex;
-
-        justify-content: space-between;
-
-        gap: 20px;
-
-        flex-wrap: wrap;
-    }
-
-
-    .match-header h3 {
-        font-size: 15px;
-    }
-
-
-    .match-header p {
-        color: rgba(255,255,255,0.75);
-
-        font-size: 13px;
-    }
-
-
-    .match-body {
-        padding: 45px 30px;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        gap: 45px;
-    }
-
-
-    .home-club-side {
-        width: 200px;
-
-        text-align: center;
-    }
-
-
-    .home-club-side img {
-        width: 110px;
-        height: 110px;
-
-        object-fit: contain;
-
-        margin: 0 auto 14px;
-    }
-
-
-    .home-club-side h4 {
-        color: #023b1b;
-
-        font-size: 17px;
-    }
-
-
-    .home-opponent-logo {
-        width: 110px;
-        height: 110px;
-
-        object-fit: contain;
-
-        margin: 0 auto 14px;
-
-        border-radius: 50%;
-    }
-
-
-    .home-vs {
-        width: 55px;
-        height: 55px;
-
-        border-radius: 50%;
-
-        background: #087a3b;
-
-        color: #ffffff;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        font-weight: 900;
-
-        flex-shrink: 0;
-    }
-
-
-    .match-details {
-        background: #eaf8ef;
-
-        border-top: 1px solid #dce9df;
-
-        padding: 20px 25px;
-
-        text-align: center;
-
-        color: #045526;
-
-        line-height: 1.8;
-    }
-
-
-    .match-details strong {
-        font-size: 16px;
-    }
-
-
-    .match-sponsor {
-        display: block;
-
-        color: #66756c;
-
-        font-size: 13px;
-
-        margin-top: 4px;
-    }
-
-
-    /* =========================
-       CLUB INTRO
-    ========================= */
-
-    .club-intro-grid {
-        display: grid;
-
-        grid-template-columns:
-            repeat(3, 1fr);
-
-        gap: 20px;
-    }
-
-
-    .club-intro-card {
-        background: #ffffff;
-
-        border: 1px solid #dce9df;
-
-        border-radius: 12px;
-
-        padding: 32px 25px;
-
-        text-align: center;
-    }
-
-
-    .club-intro-card h3 {
-        color: #045526;
-
-        font-size: 19px;
-
-        margin-bottom: 10px;
-    }
-
-
-    .club-intro-card p {
-        color: #66756c;
-
-        line-height: 1.8;
-
-        font-size: 14px;
-    }
-
-
-    /* =========================
-       CLUB INFORMATION
-    ========================= */
-
-    .club-information {
-        background: #f6faf7;
-    }
-
-
-    .info-grid-home {
-        display: grid;
-
-        grid-template-columns:
-            repeat(4, 1fr);
-
-        gap: 20px;
-    }
-
-
-    .info-card-home {
-        background: #ffffff;
-
-        border: 1px solid #dce9df;
-
-        border-radius: 10px;
-
-        padding: 28px 20px;
-
-        text-align: center;
-    }
-
-
-    .info-card-home h3 {
-        color: #087a3b;
-
-        font-size: 14px;
-
-        margin-bottom: 8px;
-    }
-
-
-    .info-card-home p {
-        color: #023b1b;
-
-        font-size: 14px;
-
-        font-weight: 800;
-
-        line-height: 1.5;
-    }
-
-
-    /* =========================
-       VALUES
-    ========================= */
-
-    .values-home {
-        background: #023b1b;
-
-        color: #ffffff;
-    }
-
-
-    .values-home .home-heading .small-title {
-        color: #8ee0ad;
-    }
-
-
-    .values-home .home-heading h2 {
-        color: #ffffff;
-    }
-
-
-    .values-home .home-heading p {
-        color: rgba(255,255,255,0.78);
-    }
-
-
-    .values-grid-home {
-        display: grid;
-
-        grid-template-columns:
-            repeat(4, 1fr);
-
-        gap: 20px;
-    }
-
-
-    .value-card-home {
-        border: 1px solid rgba(255,255,255,0.15);
-
-        background: rgba(255,255,255,0.05);
-
-        border-radius: 12px;
-
-        padding: 30px 22px;
-    }
-
-
-    .value-card-home h3 {
-        color: #ffffff;
-
-        margin-bottom: 10px;
-    }
-
-
-    .value-card-home p {
-        color: rgba(255,255,255,0.72);
-
-        font-size: 14px;
-
-        line-height: 1.8;
-    }
-
-
-    /* =========================
-       FOLLOW
-    ========================= */
-
-    .follow-home {
-        text-align: center;
-    }
-
-
-    .follow-box-home {
-        max-width: 800px;
-
-        margin: auto;
-
-        padding: 55px 30px;
-
-        background: #eaf8ef;
-
-        border: 1px solid #cfe5d6;
-
-        border-radius: 16px;
-    }
-
-
-    .follow-box-home h2 {
-        color: #023b1b;
-
-        margin-bottom: 12px;
-    }
-
-
-    .follow-box-home p {
-        max-width: 650px;
-
-        margin: auto;
-
-        color: #66756c;
-
-        line-height: 1.8;
-    }
-
-
-    .follow-button-home {
-        display: inline-block;
-
-        margin-top: 25px;
-
-        background: #087a3b;
-
-        color: #ffffff;
-
-        padding: 14px 25px;
-
-        border-radius: 6px;
-
-        font-weight: 900;
-
-        transition: 0.3s;
-    }
-
-
-    .follow-button-home:hover {
-        background: #045526;
-
-        transform: translateY(-2px);
-    }
-
-
-    /* =========================
-       PARTNERSHIP
-    ========================= */
-
-    .partnership-home {
-        background: #f6faf7;
-    }
-
-
-    .partnership-home-box {
-        max-width: 950px;
-
-        margin: auto;
-
-        background: #ffffff;
-
-        border: 1px solid #dce9df;
-
-        border-radius: 14px;
-
-        padding: 35px;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: space-between;
-
-        gap: 30px;
-    }
-
-
-    .partnership-home-box h3 {
-        color: #023b1b;
-
-        margin-bottom: 8px;
-    }
-
-
-    .partnership-home-box p {
-        color: #66756c;
-
-        max-width: 570px;
-
-        line-height: 1.7;
-    }
-
-
-    .partnership-home-links {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 10px;
-
-        min-width: 200px;
-    }
-
-
-    .partnership-home-links a {
-        color: #087a3b;
-
-        font-weight: 900;
-
-        padding: 10px 0;
-    }
-
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 950px) {
-
-        .info-grid-home,
-        .values-grid-home {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .club-intro-grid {
-            grid-template-columns: 1fr;
-        }
-
-    }
-
-
-    @media (max-width: 700px) {
-
-        .home-hero {
-            min-height: 620px;
-
-            padding: 70px 20px;
-        }
-
-
-        .home-hero-logo {
-            width: 145px;
-            height: 145px;
-        }
-
-
-        .home-hero h1 {
-            font-size: 40px;
-        }
-
-
-        .match-body {
-            flex-direction: column;
-
-            gap: 25px;
-        }
-
-
-        .home-club-side {
-            width: 100%;
-        }
-
-
-        .info-grid-home,
-        .values-grid-home {
-            grid-template-columns: 1fr;
-        }
-
-
-        .partnership-home-box {
-            flex-direction: column;
-
-            text-align: center;
-        }
-
-
-        .partnership-home-links {
-            width: 100%;
-        }
-
-    }
-
-
-    @media (max-width: 500px) {
-
-        .home-section {
-            padding: 65px 15px;
-        }
-
-
-        .home-container {
-            width: 94%;
-        }
-
-
-        .home-hero-logo {
-            width: 130px;
-            height: 130px;
-        }
-
-
-        .home-hero h1 {
-            font-size: 34px;
-        }
-
-
-        .home-hero-slogan {
-            font-size: 19px;
-        }
-
-
-        .qualification {
-            padding: 32px 20px;
-        }
-
-
-        .match-body {
-            padding: 35px 20px;
-        }
-
-    }
-
-</style>
-```
 
 </head>
 
 <body class="home-page">
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header class="header">
 
-```
-<div class="container nav-container">
 
+<div class="container nav-container">
 
     <a href="index.html" class="brand">
 
@@ -921,13 +39,9 @@
 
         <div>
 
-            <h2>
-                MARULENG FC
-            </h2>
+            <h2>MARULENG FC</h2>
 
-            <span>
-                Established 2012
-            </span>
+            <span>Established 2012</span>
 
         </div>
 
@@ -936,56 +50,38 @@
 
     <nav class="navbar">
 
-        <a href="index.html" class="active">
-            Home
-        </a>
+        <a href="index.html" class="active">Home</a>
 
-        <a href="about.html">
-            About
-        </a>
+        <a href="about.html">About</a>
 
-        <a href="team.html">
-            Team
-        </a>
+        <a href="team.html">Team</a>
 
-        <a href="fixtures.html">
-            Fixtures
-        </a>
+        <a href="fixtures.html">Fixtures</a>
 
-        <a href="news.html">
-            News
-        </a>
+        <a href="news.html">News</a>
 
-        <a href="gallery.html">
-            Gallery
-        </a>
+        <a href="gallery.html">Gallery</a>
 
-        <a href="partnership.html">
-            Partnership
-        </a>
+        <a href="partnership.html">Partnership</a>
 
-        <a href="contact.html">
-            Contact
-        </a>
+        <a href="contact.html">Contact</a>
 
     </nav>
 
 </div>
-```
+
 
 </header>
 
-<!-- =========================
+<main>
+
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section class="home-hero">
 
-```
 <div class="home-hero-content">
-
-
-    <!-- INWARD CLUB CREST -->
 
     <img
         src="logo.png"
@@ -993,26 +89,19 @@
         class="home-hero-logo"
     >
 
-
-    <h1>
-        MARULENG FC
-    </h1>
-
+    <h1>MARULENG FC</h1>
 
     <div class="home-hero-est">
         ESTABLISHED 2012
     </div>
 
-
     <p class="home-hero-slogan">
         United by Our Roots, Driven by Our Goals
     </p>
 
-
     <p class="home-hero-location">
         GA-SEKORORO • MABINS CROSS • LIMPOPO
     </p>
-
 
     <div class="home-hero-buttons">
 
@@ -1023,12 +112,11 @@
             Meet The Team
         </a>
 
-
         <a
             href="fixtures.html"
             class="home-btn home-btn-outline"
         >
-            Fixtures & Results
+            Fixtures &amp; Results
         </a>
 
     </div>
@@ -1038,15 +126,14 @@
 
 </section>
 
-<!-- =========================
-     TOP 8
-========================= -->
+<!-- =====================================================
+     TOP 8 QUALIFICATION
+===================================================== -->
 
 <section class="home-section">
 
 ```
 <div class="home-container">
-
 
     <div class="qualification">
 
@@ -1054,11 +141,7 @@
             TOP 16 GROUND TOURNAMENT
         </div>
 
-
-        <h2>
-            TOP 8 QUALIFIED
-        </h2>
-
+        <h2>TOP 8 QUALIFIED</h2>
 
         <p>
             Maruleng FC has qualified for the Top 8 stage
@@ -1073,15 +156,14 @@
 
 </section>
 
-<!-- =========================
+<!-- =====================================================
      NEXT MATCH
-========================= -->
+===================================================== -->
 
 <section class="home-section match-section">
 
 ```
 <div class="home-container">
-
 
     <div class="home-heading">
 
@@ -1089,13 +171,11 @@
             Next Match
         </span>
 
-        <h2>
-            Match Day
-        </h2>
+        <h2>Match Day</h2>
 
         <p>
-            Maruleng FC continues its Top 16 Ground Tournament
-            campaign at Barcelona Sports Ground.
+            Maruleng FC continues its football campaign
+            at Mailakolobe Sports Ground.
         </p>
 
     </div>
@@ -1107,11 +187,11 @@
         <div class="match-header">
 
             <h3>
-                Top 16 Ground Tournament
+                Upcoming Match
             </h3>
 
             <p>
-                Barcelona Sports Ground
+                Mailakolobe Sports Ground
             </p>
 
         </div>
@@ -1120,7 +200,7 @@
         <div class="match-body">
 
 
-            <!-- MARULENG -->
+            <!-- MARULENG FC -->
 
             <div class="home-club-side">
 
@@ -1136,12 +216,14 @@
             </div>
 
 
+            <!-- VS -->
+
             <div class="home-vs">
                 VS
             </div>
 
 
-            <!-- BUTSHWANA TIGERS -->
+            <!-- MANDELA UNITED -->
 
             <div class="home-club-side">
 
@@ -1152,7 +234,7 @@
                 >
 
                 <h4>
-                    Mandela United 
+                    Mandela United FC
                 </h4>
 
             </div>
@@ -1183,9 +265,9 @@
 
 </section>
 
-<!-- =========================
-     OUR CLUB
-========================= -->
+<!-- =====================================================
+     MORE THAN FOOTBALL
+===================================================== -->
 
 <section class="home-section">
 
@@ -1264,9 +346,9 @@
 
 </section>
 
-<!-- =========================
+<!-- =====================================================
      CLUB INFORMATION
-========================= -->
+===================================================== -->
 
 <section class="home-section club-information">
 
@@ -1350,9 +432,9 @@
 
 </section>
 
-<!-- =========================
-     VALUES
-========================= -->
+<!-- =====================================================
+     CLUB VALUES
+===================================================== -->
 
 <section class="home-section values-home">
 
@@ -1444,9 +526,9 @@
 
 </section>
 
-<!-- =========================
-     FOLLOW FACEBOOK
-========================= -->
+<!-- =====================================================
+     FACEBOOK
+===================================================== -->
 
 <section class="home-section follow-home">
 
@@ -1468,8 +550,6 @@
         </p>
 
 
-        <!-- Replace # with official Facebook page URL -->
-
         <a
             href="#"
             class="follow-button-home"
@@ -1484,9 +564,9 @@
 
 </section>
 
-<!-- =========================
-     PARTNERSHIP
-========================= -->
+<!-- =====================================================
+     WEBSITE PARTNERSHIP
+===================================================== -->
 
 <section class="home-section partnership-home">
 
@@ -1535,7 +615,7 @@
             <a
                 href="https://mphowebsolutions.co.za"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
             >
                 Visit Mpho Web Solutions
             </a>
@@ -1544,7 +624,7 @@
             <a
                 href="https://wa.me/27649869333"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
             >
                 WhatsApp: 064 986 9333
             </a>
@@ -1559,9 +639,11 @@
 
 </section>
 
-<!-- =========================
+</main>
+
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer class="footer">
 
@@ -1624,27 +706,25 @@
 
 <div class="footer-bottom">
 
-
     <p>
         © 2026 Maruleng Football Club.
         All Rights Reserved.
     </p>
 
 
-    <p>
+    <p class="footer-credit">
 
         Website built in partnership with
 
         <a
             href="https://mphowebsolutions.co.za"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
         >
             Mpho Web Solutions
         </a>
 
     </p>
-
 
 </div>
 ```
